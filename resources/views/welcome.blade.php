@@ -255,17 +255,6 @@ a:hover { color: #ffa809 !important;}
     <source src="{{asset('front-images/catering.mp4')}}" type="video/mp4">
   </video>
 </div> --}}
-    {{-- video begin--}}
-    <div class="container" style="width: 90% !important;">
-        <video autoplay muted loop class="img-fluid" style="border-radius: 20px;margin-top: 70px;">
-          <source src="{{asset('front-images/catering.mp4')}}" type="video/mp4">
-        </video>
-    </div>
-    <div class="arrow bounce">
-      <a class="fa fa-arrow-down fa-3x" href="#home-section" id="arrow_down"></a>
-    </div>
-    {{-- video end--}}
-    
     {{-- slider begin--}}
     <div class="intro-section custom-owl-carousel" id="home-section">
       <div class="container">
@@ -303,7 +292,20 @@ a:hover { color: #ffa809 !important;}
         </div>
       </div>
     </div>
+    
+    <div class="arrow bounce">
+      <a class="fa fa-arrow-down fa-3x" href="#home-section" id="arrow_down"></a>
+    </div>
     {{-- slider end--}}
+
+    {{-- video begin--}}
+    <div class="container" style="width: 90% !important;">
+      <video autoplay muted loop class="img-fluid" style="border-radius: 20px;margin-top: 70px;">
+        <source src="{{asset('front-images/catering.mp4')}}" type="video/mp4">
+      </video>
+    </div>
+    
+    {{-- video end--}}
 
     {{-- Join button begin--}}
     <div id="joinUs" class="" style="text-align: center;margin-top:5%">
