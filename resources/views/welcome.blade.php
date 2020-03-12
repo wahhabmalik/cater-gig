@@ -19,7 +19,6 @@ a { color: #ffa809; text-decoration: none; }
 a:hover { color: #ffa809 !important;}
 .arrow {
   text-align: center;
-  margin: 2% 0;
 }
 .bounce {
   -moz-animation: bounce 2s infinite;
@@ -41,91 +40,7 @@ a:hover { color: #ffa809 !important;}
   /* Up Arrow 2 end */
 
  /* join button start */
-.main-hr {
-  width: 30%;
-  border: none;
-  border-top: 1px solid #c3c3c3;
-}
-.icon-btn {
-  width:70px;
-  height: 60px;
-  border: 1px solid #cdcdcd;
-  background: white;
-  border-radius: 25px;
-  overflow: hidden;
-  position: relative;
-  transition: width 0.2s ease-in-out;
-}
-.add-btn:hover {
-  width: 120px;
-}
-.add-btn::before,
-.add-btn::after {
-  transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
-  content: "";
-  position: absolute;
-  height: 5px;
-  width: 60px;
-  top: calc(50% - 2px);
-  background: grey;
-}
-.add-btn::after {
-  right: 14px;
-  overflow: hidden;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
-}
-.add-btn::before {
-  left: 14px;
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
-}
-.icon-btn:focus {
-  outline: none;
-}
-.btn-txt {
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-.add-btn:hover::before,
-.add-btn:hover::after {
-  width: 4px;
-  border-radius: 2px;
-}
-.add-btn:hover .btn-txt {
-  opacity: 1;
-}
-.add-icon::after,
-.add-icon::before {
-  transition: all 0.2s ease-in-out;
-  content: "";
-  position: absolute;
-  height: 20px;
-  width: 2px;
-  top: calc(50% - 10px);
-  background: red;
-  overflow: hidden;
-}
-.add-icon::before {
-  left: 22px;
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
-}
-.add-icon::after {
-  right: 22px;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
-}
-.add-btn:hover .add-icon::before {
-  left: 15px;
-  height: 4px;
-  top: calc(50% - 2px);
-}
-.add-btn:hover .add-icon::after {
-  right: 15px;
-  height: 4px;
-  top: calc(50% - 2px);
-}
+
 
  /* join button end */
  @media (min-width: 1200px)
@@ -183,13 +98,13 @@ a:hover { color: #ffa809 !important;}
     <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
       <div class="container-fluid">
         <div class="d-flex align-items-center">
-        <div class="site-logo" style="width: 20%"><a href="index-2.html"><img style="width: 80%;" src="{{asset('front-images/catter-gig-logo.png')}}" alt=""></a></div>
+        <div class="site-logo" style="width: 20%"><a href="index-2.html"><img style="width: 80%;" src="{{asset('front-images/catter-gig-new-color.png')}}" alt=""></a></div>
           <div style="width: 60%">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-xl-block">
-                <li><a href="#home-section" class="nav-link" style="color: #ffa809">Home</a></li>
-                <li><a href="#buyer-section" class="nav-link" style="color: #ffa809">Contact</a></li>
-                <li><a href="#about-section" class="nav-link" style="color: #ffa809">About Us</a></li>
+                <li><a href="#home-section" class="nav-link" style="color: #564d7b;">Home</a></li>
+                <li><a href="#about-section" class="nav-link" style="color: #564d7b;">Contact</a></li>
+                <li><a href="#about-section" class="nav-link" style="color: #564d7b;">About Us</a></li>
               <li style="width: 25%"><a href="#home-section" class="nav-link"><img style="width:100%" src="{{asset('front-images/catergig-text-3.png')}}" alt=""></a></li>
                 {{-- <li><a href="#services-section" class="nav-link">Services</a></li> --}}
                 {{--<li><a href="#work-section" class="nav-link">Projects</a></li>
@@ -202,7 +117,7 @@ a:hover { color: #ffa809 !important;}
               <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-xl-block">
                 {{-- <li><a href="#contact-section" class="nav-link">Contact</a></li> --}}
                 {{-- <li><a href="#about-section" class="nav-link">About Us</a></li> --}}
-                <li class="cta"><a href="#contact-section" class="nav-link"><span class="text-white border-light" style="background-color: #ffa809; border-radius: 15px">Sign up</span></a>
+                <li class="cta"><a href="#joinUs" class="nav-link text-white border-light"><span class="text-white border-light" style="background-color: #ffa809; border-radius: 15px">Sign up</span></a>
                 </li>
               </ul>
             </nav>
@@ -211,54 +126,11 @@ a:hover { color: #ffa809 !important;}
         </div>
       </div>
     </header>
+
     {{-- slider begin--}}
-    {{-- <div class="intro-section custom-owl-carousel" id="home-section">
+    <div class="intro-section custom-owl-carousel" style="min-height: 650px;" id="home-section">
       <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-5 mr-auto" data-aos="fade-up">
-              <div class="owl-carousel slide-one-item-alt-text">
-                <div class="slide-text">
-                  <h1 class="header-header">Restaurant</h1>
-                  <p class="mb-5 header-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsa nulla sed quis rerum amet natus quas necessitatibus.</p>
-                  <p><a href="#services-section" id="get_started" class="btn btn-outline-light py-3 px-5">Get Started</a></p>
-                </div>
-                <div class="slide-text">
-                  <h1 class="header-header">Home Kitchen</h1>
-                  <p class="mb-5 header-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsa nulla sed quis rerum amet natus quas necessitatibus.</p>
-                  <p><a href="#services-section" id="get_started"  class="btn btn-outline-light py-3 px-5">Get Started</a></p>
-                </div>
-                <div class="slide-text">
-                  <h1 class="header-header">Party Pro</h1>
-                  <p class="mb-5 header-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsa nulla sed quis rerum amet natus quas necessitatibus.</p>
-                  <p><a href="#services-section" id="get_started" class="btn btn-outline-light py-3 px-5">Get Started</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6 ml-auto" data-aos="fade-up" data-aos-delay="100">
-              <div class="owl-carousel slide-one-item-alt">
-                <img src="{{asset('front-images/img_1.jpg')}}" alt="Image" class="img-fluid">
-                <img src="{{asset('front-images/img_2.jpg')}}" alt="Image" class="img-fluid">
-                <img src="{{asset('front-images/img_3.jpg')}}" alt="Image" class="img-fluid">
-                <img src="{{asset('front-images/img_4.jpg')}}" alt="Image" class="img-fluid">
-              </div>
-              <div class="owl-custom-direction">
-                <a href="#" class="custom-prev"><span class="icon-keyboard_arrow_left"></span></a>
-                <a href="#" class="custom-next"><span class="icon-keyboard_arrow_right"></span></a>
-              </div>
-            </div>
-        </div>
-      </div>
-    </div> --}}
-    {{-- slider end--}}
-{{-- <div class="container" style="margin-left: 0% !important; margin-top: 40px;"><!-- The video -->
-  <video autoplay muted loop id="myVideo">
-    <source src="{{asset('front-images/catering.mp4')}}" type="video/mp4">
-  </video>
-</div> --}}
-    {{-- slider begin--}}
-    <div class="intro-section custom-owl-carousel" id="home-section">
-      <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center" style="min-height: 650px;">
             <div class="col-lg-5 mr-auto" data-aos="fade-up">
               <div class="owl-carousel slide-one-item-alt-text">
                 <div class="slide-text">
@@ -299,8 +171,8 @@ a:hover { color: #ffa809 !important;}
     {{-- slider end--}}
 
     {{-- video begin--}}
-    <div class="container" style="width: 90% !important;">
-      <video autoplay muted loop class="img-fluid" style="border-radius: 20px;margin-top: 70px;">
+    <div class="container" id="video-section" style="width: 90% !important;">
+      <video autoplay muted loop class="img-fluid" style="border-radius: 20px;">
         <source src="{{asset('front-images/catering.mp4')}}" type="video/mp4">
       </video>
     </div>
@@ -309,15 +181,14 @@ a:hover { color: #ffa809 !important;}
 
     {{-- Join button begin--}}
     <div id="joinUs" class="" style="text-align: center;margin-top:5%">
-      <button class="icon-btn add-btn" id="joinBtn">
-        <div class="add-icon"></div>
-        <div class="btn-txt" style="color: #352961;font-family: Muli, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji">Join Us</div>
+      <button class="btn btn-secondary" style="box-shadow: 1px 3px 4px 2px cadetblue;font-family: cursive;border: none;color:##fffefe;border-radius: 25px;background-image:linear-gradient(to bottom right,#a9b8ba, #59d0f1, #7ab1c0);padding: 0.7rem 1.5rem;font-size: 17px;text-transform:capitalize">
+        : Join us :
       </button>
     </div>
     {{-- Join button end--}}
 
     {{--Buyer Seller begin--}}
-    <div style="background: #f1f3f8">
+    <div style="background: #f1f3f8" id="buyerSellerSection">
       <div class="container cntaner" style="margin-top: 30px;">
         <!-- Collapse buttons -->
         <div class="row" style="margin-right: 0%; margin-left: 0%">
@@ -662,17 +533,17 @@ a:hover { color: #ffa809 !important;}
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro consectetur ut hic ipsum et veritatis corrupti. Itaque eius soluta optio dolorum temporibus in, atque, quos fugit sunt sit quaerat dicta.</p>
 </div>
 <div class="col-md-3 ml-auto">
-<h3>Links</h3>
+{{--<h3>Links</h3>
 <ul class="list-unstyled footer-links">
 <li><a href="#home-section" class="smoothscroll">Home</a></li>
-{{-- <li><a href="#work-section" class="smoothscroll">Projects</a></li>
+<li><a href="#work-section" class="smoothscroll">Projects</a></li>
 <li><a href="#process-section" class="smoothscroll">Process</a></li>
 <li><a href="#testimonials-section" class="smoothscroll">Testimonials</a></li>
-<li><a href="#services-section" class="smoothscroll">Services</a></li> --}}
-</ul>
+<li><a href="#services-section" class="smoothscroll">Services</a></li> 
+</ul>--}}
 </div>
 <div class="col-md-4">
-<h3>Subscribe</h3>
+<h3>Contact Us</h3>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt incidunt iure iusto architecto? Numquam, natus?</p>
 {{-- <form action="#">
   <div class="d-flex mb-5">
@@ -692,23 +563,6 @@ a:hover { color: #ffa809 !important;}
 </div>
 </footer>
 </div>
-<div class="modal fade" tabindex="-1" role="dialog" id="my_modal">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Modal title</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      </div>
-      <div class="modal-body">
-        <p>One fine body&hellip;</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
 <script src="{{asset('front-js/jquery-3.3.1.min.js')}}" type="2b8cb759398282ad96d27baf-text/javascript"></script>
 <script src="{{asset('front-js/jquery-ui.js')}}" type="2b8cb759398282ad96d27baf-text/javascript"></script>
 <script src="{{asset('front-js/popper.min.js')}}" type="2b8cb759398282ad96d27baf-text/javascript"></script>
@@ -734,16 +588,9 @@ a:hover { color: #ffa809 !important;}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
   $(document).ready(function(){
-    $(document).on("click","#restaurant",function() {
-      $('#my_modal').modal('toggle');
-    });
 
-    $(document).on("click","#home_kitchen",function() {
-      $('#my_modal').modal('toggle');
-    });
-
-    $(document).on("click","#party_pro",function() {
-      $('#my_modal').modal('toggle');
+    $("#joinUs").focus(function() {
+        $("#sellerBtn").click();
     });
 
     $("#get_started").click(function() {
@@ -751,16 +598,17 @@ a:hover { color: #ffa809 !important;}
             scrollTop: $('#joinUs').offset().top},
             {
             complete: function() {
-              $('#sellerBtn').trigger('click');
+              $("#sellerBtn").click();
               }
-            }
+            },
+            'slow'
         );
         //$('#sellerBtn').trigger('click');
     });
 
     $("#arrow_down").click(function() {
         $('html,body').animate({
-            scrollTop: $('#home-section').offset().top},
+            scrollTop: $('#video-section').offset().top},
             'slow');
     });
 
@@ -769,13 +617,18 @@ a:hover { color: #ffa809 !important;}
     }); */
 
     $(window).scroll(function() {
-      var top_of_element = $("#joinUs").offset().top;
-      var bottom_of_element = $("#joinUs").offset().top + $("#joinUs").outerHeight();
+      var top_of_element = $("#sellerBtn").offset().top;
+      var bottom_of_element = $("#sellerBtn").offset().top + $("#sellerBtn").outerHeight();
       var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
       var top_of_screen = $(window).scrollTop();
 
       if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
         $('#joinUs').addClass('animated bounce');
+
+        if ($('#sellerBtn').hasClass('collapsed')==true && $('#sellerSection').hasClass('show')==false ) { 
+          $('#sellerSection').addClass('show');
+          $('#sellerBtn').removeClass('collapsed');
+        }
       } else {
         $('#joinUs').removeClass('animated bounce');
       }
