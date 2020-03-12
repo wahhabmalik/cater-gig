@@ -589,16 +589,14 @@ a:hover { color: #ffa809 !important;}
 <script>
   $(document).ready(function(){
 
-    $("#joinUs").focus(function() {
-        $("#sellerBtn").click();
-    });
-
     $("#get_started").click(function() {
         $('html,body').animate({
             scrollTop: $('#joinUs').offset().top},
             {
             complete: function() {
-              $("#sellerBtn").click();
+                //$('#sellerSection').addClass('show');
+                //$('#sellerBtn').removeClass('collapsed');
+                $('#sellerBtn').trigger('click');
               }
             },
             'slow'
@@ -624,11 +622,6 @@ a:hover { color: #ffa809 !important;}
 
       if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
         $('#joinUs').addClass('animated bounce');
-
-        if ($('#sellerBtn').hasClass('collapsed')==true && $('#sellerSection').hasClass('show')==false ) { 
-          $('#sellerSection').addClass('show');
-          $('#sellerBtn').removeClass('collapsed');
-        }
       } else {
         $('#joinUs').removeClass('animated bounce');
       }
